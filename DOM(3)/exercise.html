@@ -21,11 +21,12 @@
 
 <script>
   // code here
-  const labels = document.querySelectorAll('label[for]');
+  const label = document.querySelectorAll("label");
+  const input = document.qgetElementByClass("form-input");
 
-  labels.forEach(label => {
-    const inputIs = label.getElementById(inputId);
-    const inputValue = inputElement.value;
-    console.log(`${label.textContent.trim()}: ${inputValue}`);
-  });
+  for (let i=0; i<input.lenght; i++) {
+    const inputIs = input[i].value;
+    const labelIs = label[i].textContent;
+    console.log(`${labelIs} ${inputIs}`)
+  };
 </script>
